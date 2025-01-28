@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0077FF;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar h1::before {
+      content: '\1F4A7';
+      font-size: 24px;
+      margin-right: 8px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .product-category {
+      margin-bottom: 20px;
+    }
+
+    .product-category h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #0077FF;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .product-item {
+      background-color: #f1f1f1;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      width: calc(33% - 10px);
+      text-align: center;
+    }
+
+    .product-item h4 {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .product-item button {
+      padding: 8px 12px;
+      background-color: #0077FF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .product-item button:hover {
+      background-color: #005bb5;
+    }
+
+    .unavailable-button {
+      background-color: #FF0000;
+      margin-bottom: 5px;
+    }
+
+    .unavailable-button:hover {
+      background-color: #CC0000;
+    }
+
+    .form-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .form-section input {
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    .form-section button {
+      padding: 10px;
+      background-color: #0077FF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .form-section button:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h1>JZ Waters Admin</h1>
+    <div>
+      <a href="#">Dashboard</a>
+      <a href="#">Manage Products</a>
+      <a href="#">Settings</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <h2>Manage Products</h2>
+      <div class="product-category">
+        <h3>Main Products</h3>
+        <div class="product-list">
+          <div class="product-item">
+            <h4>Water Gallon</h4>
+            <button class="unavailable-button">Unavailable</button>
+            <button>Edit</button>
+          </div>
+          <div class="product-item">
+            <h4>Gallon with Faucet</h4>
+            <button class="unavailable-button">Unavailable</button>
+            <button>Edit</button>
+          </div>
+          <div class="product-item">
+            <h4>Mineral Water</h4>
+            <button class="unavailable-button">Unavailable</button>
+            <button>Edit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-category">
+        <h3>Accessories</h3>
+        <div class="product-list">
+          <div class="product-item">
+            <h4>Gallon Cap</h4>
+            <button class="unavailable-button">Unavailable</button>
+            <button>Edit</button>
+          </div>
+          <div class="product-item">
+            <h4>Faucet</h4>
+            <button class="unavailable-button">Unavailable</button>
+            <button>Edit</button>
+          </div>
+          <div class="product-item">
+            <h4>Bottle Cap</h4>
+            <button class="unavailable-button">Unavailable</button>
+            <button>Edit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-category">
+        <h3>Rent</h3>
+        <div class="product-list">
+          <div class="product-item">
+            <h4>Hot and Cold Dispenser</h4>
+            <button class="unavailable-button">Unavailable</button>
+            <button>Edit</button>
+          </div>
+          <div class="product-item">
+            <h4>Table Top</h4>
+            <button class="unavailable-button">Unavailable</button>
+            <button>Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Add New Product</h2>
+      <div class="form-section">
+        <input type="text" placeholder="Product Name">
+        <input type="text" placeholder="Category">
+        <input type="text" placeholder="Price">
+        <button>Add Product</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

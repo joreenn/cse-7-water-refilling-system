@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0077FF;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar h1::before {
+      content: '\1F4A7';
+      font-size: 24px;
+      margin-right: 8px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-top: 50px; 
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .product-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .product-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .product-item img {
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
+      margin-right: 10px;
+    }
+
+    .product-details {
+      display: flex;
+      align-items: center;
+    }
+
+    .product-details span {
+      margin-left: 10px;
+    }
+
+    .total {
+      text-align: right;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .form-group input {
+      flex: 1;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h1>JZ WATERS</h1>
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Product Selection</a>
+      <a href="#">Checkout</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <h2>Selected Products</h2>
+      <div class="product-list">
+        <div class="product-item">
+          <div class="product-details">
+            <img src="" alt="Eco-friendly Water Bottle">
+            <span>Eco-friendly Water Bottle</span>
+          </div>
+          <span>2x</span>
+          <span>PHP20.00</span>
+        </div>
+        <div class="product-item">
+          <div class="product-details">
+            <img src="" alt="Stainless Steel Tumbler">
+            <span>Stainless Steel Tumbler</span>
+          </div>
+          <span>1x</span>
+          <span>PHP15.00</span>
+        </div>
+      </div>
+      <div class="total">Total: PHP55.00</div>
+    </div>
+
+    <div class="section">
+      <h2>Delivery Details</h2>
+      <div class="form-group">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Address">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="City">
+        <input type="text" placeholder="Postal Code">
+        <input type="text" placeholder="Barangay">
+        <input type="text" placeholder="Landmark">
+      </div>    
+    </div>
+
+    <div class="section">
+      <h2>Payment Method</h2>
+      <div class="radio-group">
+        <label><input type="radio" name="payment" value="credit"> Cash on delivery</label>
+        <label><input type="radio" name="payment" value="paypal"> GCash</label>
+        
+      </div>
+    </div>
+
+  
+      
+      </div>
+    </div>
+  </div>
+</body>
+</html>
