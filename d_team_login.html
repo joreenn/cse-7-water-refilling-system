@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      background: linear-gradient(180deg,#0277BD, #B3E5FC);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -56,19 +56,31 @@
     }
 
     .login-container button:hover {
+      background-color: #005bb5;
+    }
+
+    .login-container a {
+      font-size: 14px;
+      color: #0077FF;
+      text-decoration: none;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .login-container a:hover {
       text-decoration: underline;
     }
-    </style>
-    </head>
-    <body>
-        <div class=" login-container">
-            <h1>Delivery Team Login</h1>
-            <form>
-                <input type= "text" placeholder=" Username" required>
-                <input type= "password" placeholder=" Password" required>   
-                <button type="submit">Login</button>
-            </form>
-            <a href=" # ">Forgot Password?</a>
-        </div>
-    </body>
-    </html>
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Delivery Team Login</h1>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <a href="#">Forgot Password?</a>
+  </div>
+</body>
+</html>
